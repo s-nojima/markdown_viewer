@@ -1,13 +1,13 @@
 <?php
     include_once "markdown.php";
     include_once "function.php";
-    $filelist = getFileList('/var/www/document');
+    $filelist = getFileList('/var/www/html/document');
 ?>
 <html>
 <head>
 <meta http-equiv="content-Type" content ="text/html; charset=UTF-8">
-<title>Document</title>
-<link href="github.css" rel="stylesheet">
+<title>Markdown Viewer</title>
+<link href="markdown.css" rel="stylesheet">
 <link href="main.css" rel="stylesheet">
 </head>
 <body>
@@ -32,12 +32,13 @@
     while(isset(${"html_".$i})){
         echo "<div id=".$i.">";
         echo ${"html_".$i};
+        echo "<div id=sep><hr></div>";
         echo "</div>";
         $i++;
     }
 ?>
 </div>
 
-<div class="footer">footer</div>
+<div class="footer">&copy; 2014 Red C Lab.</div>
 
 </body>
